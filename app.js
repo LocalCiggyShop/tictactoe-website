@@ -1,6 +1,6 @@
 var express = require('express')
 var app = express()
-app.use(express.static('public'))
+
 const port = process.env.PORT || 5000
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
@@ -18,7 +18,7 @@ app.listen(port, () => {
 
 app
 .get('/', function(req, res){
-  res.render('multiplayer-tic-tac-toe');
+  res.render("multiplayer-tic-tac-toe.ejs");
 });
 
   
