@@ -15,8 +15,10 @@ app.use(express.static(__dirname + '/public'));
 app.listen(port, () => {
   console.log(`Server started listening on port: ${port}`);
 })
-app.get('/', function(req, res){
-  res.render('/multiplayer-tic-tac-toe');
+
+app
+.get('/', function(req, res){
+  res.render('multiplayer-tic-tac-toe');
 });
 
   
