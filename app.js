@@ -18,7 +18,7 @@ app.listen(port, () => {
 app.get('/', function(req, res){
   res.render('/multiplayer-tic-tac-toe');
 });
-  
+
   
   var players = {},
     unmatched;
