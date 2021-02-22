@@ -1,8 +1,8 @@
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
-
 // server config
 const PORT = process.env.PORT || 5000;
+
+var http = require('http').createServer(app);
+var io = require('socket.io')(http);
 
 app.listen(PORT, () => {
   console.log(`Server started listening on port: ${PORT}`);
