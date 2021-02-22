@@ -1,5 +1,13 @@
 var socket = io();
 var symbol;
+
+io.on('connection', (socket) => {
+  console.log('a user connected');
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
+});
+
 $(function () {
   $(".board button").attr("disabled", true);
   $(".board> button").on("click", makeMove);
