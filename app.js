@@ -10,11 +10,13 @@ app.use(express.urlencoded({ extended: true }));
 //app.use(express.static("public"));
 app.set("view engine", "html");
 
+app.use(express.static(__dirname + '/public'));
+
 app.listen(port, () => {
   console.log(`Server started listening on port: ${port}`);
 })
 app.get('/', function(req, res){
-  res.render(__dirname + '/../multiplayer-tic-tac-toe');
+  res.render('/multiplayer-tic-tac-toe');
 });
   
   
