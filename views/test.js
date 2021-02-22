@@ -1,25 +1,4 @@
-<style>
-    body {
-    text-align: center;
-   }
-   .board {
-    margin: auto;
-    width: 350px;
-   }
-   .board button {
-    height: 100px;
-    width: 100px;
-    margin: 0px;
-    padding: 0px;
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    font-size: 3em
-   }
-</style>
-
-<script>
-    var socket = io();
+var socket = io();
 var symbol;
 $(function () {
   $(".board button").attr("disabled", true);
@@ -156,29 +135,3 @@ function makeMove(e) {
     position: $(this).attr("id"),
   });
 }
-</script>
-
-<!doctype html>
-<html>
-  <head>
-    <title>Aprion 2P - Tic Tac Toe</title>
-  </head>
-  <body>
-    <div class="board">
-      <button id="a0"></button>
-      <button id="a1"></button>
-      <button id="a2"></button>
-      <button id="b0"></button>
-      <button id="b1"></button>
-      <button id="b2"></button>
-      <button id="c0"></button>
-      <button id="c1"></button>
-      <button id="c2"></button>
-      <div id="messages">Waiting for opponent to join...</div>
-      </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-    <!-- <script src="./js/script.js" defer> -->
-    </script>
-  </body>
-</html>
