@@ -9,7 +9,7 @@ app.listen(port, () => {
   console.log(`Server started listening on port: ${port}`);
 })
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/../multiplayer-tic-tac-toe.html');
+  res.render(__dirname + '/../multiplayer-tic-tac-toe.html');
 });
   
   
