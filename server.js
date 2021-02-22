@@ -2,7 +2,7 @@ var express = require('express')
 var app = express()
 app.use(express.static('public'))
 const port = process.env.PORT || 5000
-var http = require('http').createServer(app);
+var http = require('http').createServer(express());
 var io = require('socket.io')(http);;
 
 app.listen(port, () => {
