@@ -16,9 +16,8 @@ app.listen(port, () => {
   console.log(`Server started listening on port: ${port}`);
 })
 
-app
-.get('/', function(req, res){
-  res.render("multiplayer-tic-tac-toe.ejs");
+app.get('/', function(req, res){
+  res.render("index");
 });
 
   
