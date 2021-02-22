@@ -3,13 +3,13 @@ var app = express()
 app.use(express.static('public'))
 const port = process.env.PORT || 5000
 var http = require('http').createServer(app);
-var io = require('socket.io')(http);;
+var io = require('socket.io')(http);
 
 app.listen(port, () => {
   console.log(`Server started listening on port: ${port}`);
 })
 app.get('/', function(req, res){
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/multiplayer-tic-tac-toe.html');
   });
   
   
