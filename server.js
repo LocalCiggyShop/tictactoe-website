@@ -2,6 +2,8 @@
 const PORT = process.env.PORT || 5000;
 
 const app = require('express')
+var app = express()
+app.use(express.static('public'))
 
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
@@ -26,7 +28,7 @@ const Connectedport = process.env.PORT || 5000;
 http.listen(Connectedport)
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/multiplayer-tic-tac-toe.html');
+  res.sendFile(__dirname + '/../multiplayer-tic-tac-toe.html');
 });
 
 
