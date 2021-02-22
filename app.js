@@ -30,6 +30,8 @@ app.get('/', function(req, res){
     socket.emit('connect',{msg:"hello"})
     joinGame(socket);
   
+    console.log("user left")
+
     if (getOpponent(socket)) {
       socket.emit("game.begin", {
         symbol: players[socket.id].symbol,
@@ -45,12 +47,14 @@ app.get('/', function(req, res){
       }
       socket.emit("move.made", data);
       getOpponent(socket).emit("move.made", data);
+      console.log("user left")
     });
 
     socket.on("disconnect", function () {
       if (getOpponent(socket)) {
         getOpponent(socket).emit("opponent.left");
       }
+      console.log("user left")
     });
   });
   
