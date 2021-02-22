@@ -5,6 +5,11 @@ const port = process.env.PORT || 5000
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
+// middlewares
+app.use(express.urlencoded({ extended: true }));
+//app.use(express.static("public"));
+app.set("view engine", "html");
+
 app.listen(port, () => {
   console.log(`Server started listening on port: ${port}`);
 })
