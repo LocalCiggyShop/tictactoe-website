@@ -20,6 +20,14 @@ app.get('/', function(req, res){
   res.render("index");
 });
 
+app.get('/aprion-chat', function(req, res){
+  res.render("Chat-Application");
+});
+
+io.on('connection', socket => {
+    socket.emit('chat-message', 'Hello World')
+})
+
   
   var players = {},
     unmatched;
