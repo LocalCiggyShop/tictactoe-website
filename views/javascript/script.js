@@ -1,6 +1,4 @@
-const port = process.env.PORT || 5000
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
+var io = require('socket.io');
 
 var socket = io();
 var symbol;
