@@ -1,5 +1,6 @@
-var socket = io();
 const io = io()
+
+var socket = io();
 var symbol;
 
 io.on('connection', (socket) => {
