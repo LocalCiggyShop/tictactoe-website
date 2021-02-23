@@ -21,7 +21,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/aprion-chat', function(req, res){
-  res.render("Chat-Application");
+  res.render("Chat");
 });
 
 io.on('connection', socket => {
