@@ -24,14 +24,8 @@ app.get('/chat', function(req, res){
   res.render("chat");
 });
 
-io.on('connection', socket => {
-    socket.emit('chat-message', 'Hello World')
-})
-
-  
   var players = {},
     unmatched;
-  
   
   io.sockets.on("connection", function (socket) {
       console.log("socket connected")
