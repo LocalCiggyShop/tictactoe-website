@@ -20,8 +20,8 @@ app.get('/', function(req, res){
   res.render("index");
 });
 
-app.get('/aprion-chat', function(req, res){
-  res.render("Chat");
+app.get('/chat', function(req, res){
+  res.render("chat");
 });
 
 io.on('connection', socket => {
